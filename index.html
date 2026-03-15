@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP TOY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+</head>
+<body>
+    <header class="header">
+  <div class="container">
+    <div class="header_navbar">
+      <div class="header_logo">
+        <img src="./img/logo.PNG" alt="Pop Toy Logo">
+      </div>
+
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="header_navbar_nav" id="mobileMenu">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#collections">Наши продукты</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+    </header>
+
+    <main class="main" id="home">
+  <div class="container">
+    <div class="main__content">
+      <div class="main__info">
+
+        <h1 class="main__title">
+          POP TOY KAZAKHSTAN
+        </h1>
+
+        <p class="main__description">
+          Оригинальные коллекции, яркие эмоции и стильные фигурки
+          для тех, кто любит необычные серии и ценит детали.
+        </p>
+
+        <div class="main__tags">
+          <span class="main__tag">Секретные боксы</span>
+          <span class="main__tag">Коллекционные игрушки</span>
+        </div>
+
+        <div class="main__buttons">
+          <a href="#collections" class="main__btn main__btn--secondary">Смотреть коллекции</a>
+          <a href="https://kaspi.kz/shop/info/merchant/30443057/reviews/?productCode=160476498&masterSku=160476498&merchantSku=288962521&tabId=PRODUCT" class="main__btn main__btn--secondary">Каспи магазин</a>
+        </div>
+      </div>
+
+      <div class="main__visual">
+        <div class="main__product-card">
+          <img src="./img/zoraa2.png" alt="Pop Toy figure">
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+    <section class="about-us" id="about">
+  <div class="container">
+    <div class="about-us__content">
+      <div class="about-us__content_text">
+        <h2>О нас</h2>
+        <p>
+          Pop Toy — это сеть магазинов коллекционных игрушек и секретных боксов.
+          Мы предлагаем оригинальные коллекционные серии, в которых каждая покупка
+          становится элементом неожиданности и ярких эмоций.
+        </p>
+        <p>
+          Ассортимент Pop Toy формируется с учётом мировых трендов, а вся продукция
+          поставляется от проверенных производителей и официальных дистрибьюторов.
+        </p>
+        <p>
+          Мы гарантируем подлинность, качество и единые стандарты сервиса во всех
+          магазинах сети.
+        </p>
+      </div>
+      <div class="about-us__content_img">
+        <img src="./img/about-img.jpg" alt="О магазине Pop Toy">
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="collections" id="collections">
+            <h2 class="title">Наши коллекции</h2>
+            <div class="collections_content">
+                
+                <div class="carousel-container">
+                    <div class="slider-title" id="sliderTitle"></div>
+                    <div class="carousel-stage" id="carousel-stage">
+                        <!-- card structure defined in js for DOM Manipulation -->
+                    </div>
+
+                    <div class="carousel-controls">
+                        <button id="prev-btn" class="nav-btn">‹</button>
+
+                        <div class="pagination-indicators" id="pagination-dots">
+                        </div>
+
+                        <button id="next-btn" class="nav-btn">›</button>
+                    </div>
+                    </div>
+            </div>
+    </section>
+
+    <section class="products-showcase" id="products">
+  <div class="container">
+    <div class="products-showcase__top">
+      <div>
+        <h2 class="products-showcase__title">Популярные продукты</h2>
+      </div>
+
+      <div class="products-showcase__nav">
+        <button class="products-showcase__arrow" id="productsPrev" aria-label="Назад">‹</button>
+        <button class="products-showcase__arrow" id="productsNext" aria-label="Вперёд">›</button>
+      </div>
+    </div>
+
+    <div class="products-slider-wrapper">
+      <div class="products-slider" id="productsSlider">
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/15.png" alt="Dora figure" class="product-card__image">
+            <span class="product-card__badge">Хит</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Rayan Natural-Born Player</h3>
+            <p class="product-card__price">9 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/rayan-natural-born-player-12-sm-1-sht-156894520/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/21.png" alt="Dora figure" class="product-card__image">
+            <span class="product-card__badge">New</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Rayan Youthful Days</h3>
+            <p class="product-card__price">9 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/rayan-youthful-days-12-sm-1-sht-156969418/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/40.png" alt="Dora figure" class="product-card__image">
+            <span class="product-card__badge">Top</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Rayan All Life Blossoms</h3>
+            <p class="product-card__price">9 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/rayan-all-life-blossoms-12-sm-1-sht-158038443/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/106.png" alt="Rayan figure" class="product-card__image">
+            <span class="product-card__badge">Sale</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Siinono</h3>
+            <p class="product-card__price">12 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/igrushka-podveska-siinono-18-sm-mul-tikolor-157592989/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/33.png" alt="Zoraa figure" class="product-card__image">
+            <span class="product-card__badge">Hot</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Zoraa Cuteness Is Justice</h3>
+            <p class="product-card__price">9 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/baby-zoraa-cuteness-is-justice-12-sm-1-sht-156901132/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/27.png" alt="Sally figure" class="product-card__image">
+            <span class="product-card__badge">Hot</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Zoraa «I’m The Boss»</h3>
+            <p class="product-card__price">9 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/baby-zoraa-i-m-the-boss-12-sm-1-sht-156969599/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/27.png" alt="Sally figure" class="product-card__image">
+            <span class="product-card__badge">New</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Zoraa «I’m The Boss»</h3>
+            <p class="product-card__price">9 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/baby-zoraa-i-m-the-boss-12-sm-1-sht-156969599/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/dora box.png" alt="Sally figure" class="product-card__image">
+            <span class="product-card__badge">New</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Dora «An Ideal World»</h3>
+            <p class="product-card__price">9 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/dora-an-ideal-world-12-sm-1-sht-156969653/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/7.png" alt="Sally figure" class="product-card__image">
+            <span class="product-card__badge">Hot</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Dora Animal Series</h3>
+            <p class="product-card__price">13 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/igrushka-podveska-dora-animal-series-17-sm-mul-tikolor-156979909/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/12.png" alt="Sally figure" class="product-card__image">
+            <span class="product-card__badge">New</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Dora Shanhai Dream</h3>
+            <p class="product-card__price">13 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/igrushka-podveska-dora-shanhai-dream-15-sm-mul-tikolor-156979891/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/6.png" alt="Sally figure" class="product-card__image">
+            <span class="product-card__badge">Hot</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Grumpipi Series 1</h3>
+            <p class="product-card__price">12 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/igrushka-podveska-grumpipi-series-1-15-sm-mul-tikolor-156969815/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/1.png" alt="Sally figure" class="product-card__image">
+            <span class="product-card__badge">New</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Grumpipi Series 2</h3>
+            <p class="product-card__price">12 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/igrushka-podveska-grumpipi-series-2-15-sm-mul-tikolor-156785358/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/97.png" alt="Sally figure" class="product-card__image">
+            <span class="product-card__badge">New</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Sally Fantasy Fairy</h3>
+            <p class="product-card__price">12 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/mjagkaja-igrushka-sally-fantasy-fairy-17-sm-mul-tikolor-157593015/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrap">
+            <img src="./img/237.png" alt="Sally figure" class="product-card__image">
+            <span class="product-card__badge">New</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Sally Sweet Dream</h3>
+            <p class="product-card__price">12 990 ₸</p>
+            <a href="https://kaspi.kz/shop/p/igrushka-podveska-sally-serija-sweet-dream-15-sm-mul-tikolor-160476498/"><button class="product-card__btn">Купить</button></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="contact-modern" id="contacts">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+
+      <div class="col-lg-5">
+        <div class="contact-card h-100">
+          <h2 class="contact-title">Контакты</h2>
+          <p class="contact-subtitle">Pop Toy — магазин ярких эмоций</p>
+
+          <div class="contact-list">
+            <a href="tel:+77001234567" class="contact-link">
+              <div class="icon">📞</div>
+              <div>
+                <small>Телефон</small>
+                <strong>+7 (700) 123-45-67</strong>
+              </div>
+            </a>
+
+            <a href="malito: support@poptoy.kz" class="contact-link">
+              <div class="icon">✉️</div>
+              <div>
+                <small>Почта</small>
+                <strong>support@poptoy.kz</strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="social-modern">
+  <a href="https://www.instagram.com/pop_toy_kz/" class="social-btn insta" aria-label="Instagram">
+    <svg viewBox="0 0 24 24">
+      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5a4.5 4.5 0 1 0 0 9a4.5 4.5 0 0 0 0-9zm6-1.25a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5z"/>
+    </svg>
+    <span>Instagram</span>
+  </a>
+
+  <a href="https://www.tiktok.com/@pop_toy_kz" class="social-btn tiktok" aria-label="TikTok">
+    <svg viewBox="0 0 24 24">
+      <path d="M16 3a5 5 0 0 0 4 4v3a8 8 0 0 1-4-1v6.5a5.5 5.5 0 1 1-5.5-5.5c.5 0 1 .1 1.5.2v3a2.5 2.5 0 1 0 1.5 2.3V3z"/>
+    </svg>
+    <span>TikTok</span>
+  </a>
+</div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="map-card h-100">
+          <iframe
+            src="https://makemap.2gis.ru/widget?data=eJw1jsFuxCAMRP_FvaIVgRAoH9Cqt71VarWHKHhbJBIj4pW6jfLvJcnWJ8sznnkLUAlYMLwijcgl4gz-cwG-ZwQPL9jzrSAIyIUyFt71BQZKVKr-dL0qI2XVOXLaPuoacB5KzBxpOg6_b1PAH_CN_J9VwNdReN_iHm1nihNX_0AVKk497zC2OzltnGxFq0-qbW3jLvU_BvCd6daLgLHPZ5rjUbhA6hn8w2ulM051SmkjIG36EWdtY7WVunnWlY9orHS2plZySun9GzF97FcuN1z_AEXyWYo"
+            frameborder="0"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer-modern">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+
+      <!-- Логотип -->
+      <div class="col-lg-4 text-lg-start text-center">
+        <div class="footer-logo">
+          <!-- ВРЕМЕННЫЙ ЛОГОТИП -->
+          <img src="./img/logo2.PNG" alt="Pop Toy Logo">
+        </div>
+      </div>
+
+      <!-- Навигация -->
+      <div class="col-lg-4 text-center">
+        <ul class="footer-nav">
+          <li><a href="">Главная</a></li>
+        <li><a href="">О нас</a></li>
+        <li><a href="">Наши продукты</a></li>
+        <li><a href="">Контакты</a></li>
+        </ul>
+      </div>
+
+      <!-- Соцсети -->
+      <div class="col-lg-4 text-lg-end text-center">
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/pop_toy_kz/" class="social-icon insta" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5a4.5 4.5 0 1 0 0 9a4.5 4.5 0 0 0 0-9zm0 7.4a2.9 2.9 0 1 1 0-5.8a2.9 2.9 0 0 1 0 5.8zM17.8 6.2a1 1 0 1 1-2 0a1 1 0 0 1 2 0z"/>
+            </svg>
+          </a>
+
+          <a href="https://www.tiktok.com/@pop_toy_kz" class="social-icon tiktok" aria-label="TikTok">
+            <svg viewBox="0 0 24 24">
+              <path d="M15 3c.6 2.7 2.5 4.6 5 5v3.2c-2-.1-3.8-.8-5-2v6.5a5.5 5.5 0 1 1-5.5-5.5c.4 0 .8 0 1.2.1v3.1a2.4 2.4 0 1 0 1.9 2.3V3h2.4z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom text-center">
+      © 2026 Pop Toy. Все права защищены
+    </div>
+  </div>
+</footer>
+
+    
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+    });
+  </script>
+</body>
+</html>
