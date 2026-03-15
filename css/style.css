@@ -1577,3 +1577,21 @@ ol {
 .products-showcase {
   padding-top: 50px;
 }
+
+/* =========================
+   FOOTER MOBILE FIX
+   ========================= */
+
+@media (max-width: 992px){
+
+  .footer-logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .footer-logo img{
+    margin:0 auto;
+  }
+
+}
